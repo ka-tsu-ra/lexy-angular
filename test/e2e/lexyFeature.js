@@ -13,6 +13,6 @@ describe('lexy forum', function() {
 
     var posts = element.all(by.repeater('post in mainCtrl.posts'));
 
-    expect(posts.getText()).toContain('A new post!');
+    expect(posts.getText()).toContain('A new post! - upvotes: 0');
   });
 });

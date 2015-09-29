@@ -9,7 +9,10 @@ lexy.controller('MainController', [function() {
     {title: 'post 5', upvotes: 4}
   ];
 
-  self.addPost = function(post) {
+  self.title = "";
+
+  self.addPost = function() {
+    var post = {title: self.title, upvotes: 0};
     self.posts.push(post);
   };
 }]);

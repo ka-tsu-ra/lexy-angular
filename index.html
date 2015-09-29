@@ -9,6 +9,11 @@
     <script src="js/MainController.js"></script>
   </head>
   <body ng-controller="MainController as mainCtrl">
+    <form class="form-horizontal">
+      New post:<input type="text" ng-model="mainCtrl.title">
+      <button class="btn" ng-click="mainCtrl.addPost()">Add post</button>
+    </form>  
+
     <div ng-repeat="post in mainCtrl.posts | orderBy: '-upvotes'">
       {{ post.title }} - upvotes: {{ post.upvotes }}
     </div>
