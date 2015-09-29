@@ -9,8 +9,8 @@
     <script src="js/MainController.js"></script>
   </head>
   <body ng-controller="MainController as mainCtrl">
-    <div>
-      {{mainCtrl.test()}}
+    <div ng-repeat="post in mainCtrl.posts">
+      {{ post }}
     </div>
   </body>
 </html>

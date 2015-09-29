@@ -7,7 +7,7 @@ describe('MainController', function() {
     ctrl = $controller('MainController');
   }));
 
-  it('returns the string in testText', function() {
-    expect(ctrl.test()).toEqual('yooo');
+  it('posts contains an array of posts', function() {
+    expect(ctrl.posts).toEqual(['post 1', 'post 2', 'post 3', 'post 4', 'post 5']);
   });
 });
