@@ -1,1 +1,1 @@
-var lexy = angular.module('lexy', ['ngResource']);
+var lexy = angular.module('Lexy', ['ngResource']);

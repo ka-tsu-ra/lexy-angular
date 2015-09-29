@@ -1,4 +1,4 @@
-<html ng-app="Lexy">
+<html ng-app="Lexy" >
   <head>
     <title>lexy</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
@@ -6,10 +6,11 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/MainController.js"></script>
   </head>
-  <body ng-controller="MainCtrl">
+  <body ng-controller="MainController as mainCtrl">
     <div>
-      {{test}}
+      {{mainCtrl.test()}}
     </div>
   </body>
 </html>
