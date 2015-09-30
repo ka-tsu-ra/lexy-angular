@@ -8,5 +8,6 @@ lexy.controller('MainController', [function() {
   self.addPost = function() {
     var post = {title: self.title, upvotes: 0};
     self.posts.push(post);
+    self.title = "";
   };
 }]);
