@@ -20,5 +20,11 @@ describe('MainController', function() {
       expect(ctrl.posts).toEqual([
         {title: 'New post!', upvotes: 0}]);
     });
+
+    it('clears the title once the post has been added', function() {
+      ctrl.title = 'New post!';
+      ctrl.addPost();
+      expect(ctrl.title).toEqual("");
+    });
   });
 });
