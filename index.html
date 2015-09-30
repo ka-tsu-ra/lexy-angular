@@ -15,7 +15,7 @@
     </form>
 
     <div ng-repeat="post in mainCtrl.posts | orderBy: '-upvotes'">
-      <span ng-click="mainCtrl.incrementUpvotes(post)">^</span>
+      <span class="upvoteBtn" ng-click="mainCtrl.incrementUpvotes(post)">^</span>
       {{ post.title }} - upvotes: {{ post.upvotes }}
     </div>
   </body>

@@ -13,7 +13,7 @@ describe('lexy forum', function() {
     title.sendKeys('A new post!');
     postButton.click();
 
-    expect(posts.getText()).toContain('A new post! - upvotes: 0');
+    expect(posts.getText()).toContain('^ A new post! - upvotes: 0');
   });
 
   describe('when adding a post', function() {
@@ -29,18 +29,18 @@ describe('lexy forum', function() {
       postButton.click();
       title.sendKeys('');
       postButton.click();
-      expect(posts.getText()).toEqual(['A new post! - upvotes: 0']);
+      expect(posts.getText()).toEqual(['^ A new post! - upvotes: 0']);
       // why does this text have a [] around it? must be the whole array which is missed out when you use the ng-repeat and only the elements inside it are printed used.
     });
   });
 
   describe('when upvoting a post', function() {
 
-    xit('clicking the upvote button next to a post makes the number of upvotes for that post go up', function() {
+    it('clicking the upvote button next to a post increments the upvotes for that post by one', function() {
       title.sendKeys('A new post!');
       postButton.click();
       upvoteButton.click();
-      expect(posts.getText()).toEqual(['A new post! - upvotes: 1']);
+      expect(posts.getText()).toEqual(['^ A new post! - upvotes: 1']);
     });
 
   });
