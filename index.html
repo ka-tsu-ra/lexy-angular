@@ -10,13 +10,15 @@
   </head>
   <body ng-controller="MainController as mainCtrl">
     <form class="form-horizontal">
-      New post:<input type="text" ng-model="mainCtrl.title">
+
+      <input type="text" placeholder="Post title" ng-model="mainCtrl.title">
+      <input type="text" placeholder="Post body" ng-model="mainCtrl.body">
       <button class="postBtn" ng-click="mainCtrl.addPost()">Add post</button>
     </form>
 
     <div ng-repeat="post in mainCtrl.posts | orderBy: '-upvotes'">
       <span class="upvoteBtn" ng-click="mainCtrl.incrementUpvotes(post)">^</span>
-      {{ post.title }} - upvotes: {{ post.upvotes }}
+      {{ post.title }} {{ post.body }} - upvotes: {{ post.upvotes }}
     </div>
   </body>
 </html>

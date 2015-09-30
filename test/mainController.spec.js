@@ -16,15 +16,18 @@ describe('MainController', function() {
 
     it('adds the new post to the list of posts', function() {
       ctrl.title = 'New post!';
+      ctrl.body = 'All the post text...';
       ctrl.addPost();
       expect(ctrl.posts).toEqual([
-        {title: 'New post!', upvotes: 0}]);
+        {title: 'New post!', body: 'All the post text...', upvotes: 0}]);
     });
 
-    it('clears the title once the post has been added', function() {
+    it('clears the title and body once the post has been added', function() {
       ctrl.title = 'New post!';
+      ctrl.body = 'All the post text...';
       ctrl.addPost();
-      expect(ctrl.title).toEqual("");
+      expect(ctrl.title).toEqual('');
+      expect(ctrl.body).toEqual('');
     });
   });
 
