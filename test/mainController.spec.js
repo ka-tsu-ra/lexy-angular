@@ -27,4 +27,15 @@ describe('MainController', function() {
       expect(ctrl.title).toEqual("");
     });
   });
+
+  describe('when upvoting a post', function() {
+
+    it('increments the number of upvotes', function() {
+      ctrl.posts = [{ title: 'Post!', upvotes: 0 }];
+      var post = ctrl.posts[0];
+      ctrl.incrementUpvotes(post);
+      expect(ctrl.posts).toEqual([
+        { title: 'Post!', upvotes: 1 }]);
+    });
+  });
 });
