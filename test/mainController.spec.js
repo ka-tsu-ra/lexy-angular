@@ -15,17 +15,13 @@ describe('MainController', function() {
   describe('when adding a new post', function() {
 
     it('adds the new post to the list of posts', function() {
-      ctrl.title = 'New post!';
-      ctrl.body = 'All the post text...';
-      ctrl.addPost();
+      makePost();
       expect(ctrl.posts).toEqual([
         {title: 'New post!', body: 'All the post text...', upvotes: 0}]);
     });
 
     it('clears the title and body once the post has been added', function() {
-      ctrl.title = 'New post!';
-      ctrl.body = 'All the post text...';
-      ctrl.addPost();
+      makePost();
       expect(ctrl.title).toEqual('');
       expect(ctrl.body).toEqual('');
     });
@@ -41,4 +37,10 @@ describe('MainController', function() {
         { title: 'Post!', upvotes: 1 }]);
     });
   });
+
+  function makePost() {
+    ctrl.title = 'New post!';
+    ctrl.body = 'All the post text...';
+    ctrl.addPost();
+  }
 });
