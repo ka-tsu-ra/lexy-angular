@@ -7,6 +7,7 @@ lexy.controller('MainController', ['postsFactory', function(postsFactory) {
   self.body = "";
 
   self.addPost = function() {
+    console.log('yo');
 
     var post = {title: self.title, body: self.body, upvotes: 0};
     if(post.title === '' || post.body === '') { return; }
