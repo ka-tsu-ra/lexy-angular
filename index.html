@@ -15,10 +15,13 @@
           <h1>Lexy</h1>
         </div>
 
-    <form class="form-horizontal">
-
-      <input type="text" placeholder="Post title" ng-model="mainCtrl.title">
-      <input type="text" placeholder="Post body" ng-model="mainCtrl.body">
+    <form class="form-horizontal" ng-submit="mainCtrl.addPost()">
+      <div class="form-group">
+        <input type="text" class="col-xs-8" placeholder="Post title" ng-model="mainCtrl.title">
+      </div>
+      <div class="form-group">
+        <input type="text" class="col-xs-8" placeholder="Post body" ng-model="mainCtrl.body">
+      </div>
       <button class="postBtn" ng-click="mainCtrl.addPost()">Add post</button>
     </form>
 
