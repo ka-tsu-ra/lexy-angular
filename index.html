@@ -3,6 +3,7 @@
     <title>lexy</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/stylesheet.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -29,7 +30,7 @@
 
     <div ng-repeat="post in mainCtrl.posts | orderBy: '-upvotes'">
       <span class="upvoteBtn" ng-click="mainCtrl.incrementUpvotes(post)">
-        <i class="fa fa-arrow-circle-up"></i>
+        <i class="fa fa-thumbs-up"></i>
       </span>
         upvotes: {{ post.upvotes }}
       <span style="font-size:20px; margin-left:10px;">
