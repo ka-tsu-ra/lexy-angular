@@ -1,4 +1,4 @@
-<html ng-app="Lexy" >
+<html ng-app="Lexy">
   <head>
     <title>lexy</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
@@ -9,6 +9,12 @@
     <script src="js/MainController.js"></script>
   </head>
   <body ng-controller="MainController as mainCtrl">
+    <div class="row">
+      <div class="col1-md-6 col-md-offset-3">
+        <div class"page-header">
+          <h1>Lexy</h1>
+        </div>
+
     <form class="form-horizontal">
 
       <input type="text" placeholder="Post title" ng-model="mainCtrl.title">
@@ -18,7 +24,13 @@
 
     <div ng-repeat="post in mainCtrl.posts | orderBy: '-upvotes'">
       <span class="upvoteBtn" ng-click="mainCtrl.incrementUpvotes(post)">^</span>
-      {{ post.title }} {{ post.body }} - upvotes: {{ post.upvotes }}
+        upvotes: {{ post.upvotes }}
+      <span style="font-size:20px; margin-left:10px;">
+        {{ post.title }}
+        <span> {{ post.body }} </span>
+      </span>
+
     </div>
   </body>
 </html>
+<!-- {{ post.title }} {{ post.body }} - -->
