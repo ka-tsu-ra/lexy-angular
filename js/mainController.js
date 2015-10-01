@@ -1,7 +1,7 @@
-lexy.controller('MainController', [function() {
+lexy.controller('MainController', ['postsFactory', function(postsFactory) {
   var self = this;
 
-  self.posts = [];
+  self.posts = postsFactory.posts;
 
   self.title = "";
   self.body = "";
@@ -10,7 +10,7 @@ lexy.controller('MainController', [function() {
 
     var post = {title: self.title, body: self.body, upvotes: 0};
     if(post.title === '' || post.body === '') { return; }
-    self.posts.push(post);
+    postsFactory.posts.push(post);
     self.title = "";
     self.body = "";
   };

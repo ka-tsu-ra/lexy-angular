@@ -14,7 +14,7 @@ describe('lexy forum', function() {
 
     it('displays a post once it has been added', function() {
       makePost();
-      expect(posts.getText()).toContain('^ upvotes: 0 A new post! All the post text...');
+      expect(posts.getText()).toContain('upvotes: 0 A new post! All the post text...');
     });
 
     it('the new post box resets to empty after a new post is added', function() {
@@ -42,7 +42,7 @@ describe('lexy forum', function() {
     it('clicking the upvote button next to a post increments the upvotes for that post by one', function() {
       makePost();
       upvoteButton.click();
-      expect(posts.getText()).toEqual(['^ upvotes: 1 A new post! All the post text...']);
+      expect(posts.getText()).toEqual(['upvotes: 1 A new post! All the post text...']);
       // need to exclude the ^ from the test expectation somehow
     });
   });
